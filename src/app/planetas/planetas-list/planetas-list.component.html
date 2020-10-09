@@ -1,0 +1,18 @@
+<mat-form-field class="form_input">
+  <mat-label>Buscar Planetas</mat-label>
+  <input matInput placeholder="Nome do planeta" value="" (input)="planetaBusca = $event.target.value">
+</mat-form-field>
+
+<mat-grid-list #grid [cols]="cols" rowHeight="300px" gutterSize="10px">
+  <mat-grid-tile *ngFor="let planeta of filtrarPlanetas()">
+
+   <app-planetas-card
+      [srcImagem]="formatarUrlImagem(planeta.image)"
+      [altImagem]="planeta.name"
+      [titulo]="planeta.name"
+      [routeTo]="'/residentes/'+planeta.name"
+      [populacao]="planeta.residents.length"></app-planetas-card>
+
+  </mat-grid-tile>
+</mat-grid-list>
+

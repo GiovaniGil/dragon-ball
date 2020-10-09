@@ -1,0 +1,12 @@
+<mat-card class="item">
+  <mat-card-header>
+    <mat-card-title class="titulo">Planeta {{ titulo }}</mat-card-title>
+  </mat-card-header>
+  <img class="image" mat-card-image [src]="srcImagem" [alt]="altImagem">
+  <mat-card-content>
+    <mat-card-subtitle>População: {{ populacao }} habitantes.</mat-card-subtitle>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button [routerLink]="routeTo">Ver residentes </button>
+  </mat-card-actions>
+</mat-card>

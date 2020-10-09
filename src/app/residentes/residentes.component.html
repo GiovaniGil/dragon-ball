@@ -1,0 +1,10 @@
+<mat-card class="item">
+  <mat-card-header>
+    <mat-card-title class="titulo">Planeta {{ planeta.name }}</mat-card-title>
+  </mat-card-header>
+  <img class="image" mat-card-image [src]="planeta.image" [alt]="planeta.name">
+  <mat-card-content>
+    <mat-card-subtitle>Residentes: {{ planeta.residents.join(', ') }}.</mat-card-subtitle>
+  </mat-card-content>
+
+</mat-card>

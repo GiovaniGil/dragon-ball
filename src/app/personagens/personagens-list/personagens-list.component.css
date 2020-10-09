@@ -1,0 +1,45 @@
+
+.mat-grid-tile {
+  overflow: visible;
+
+}
+
+.mat-grid-list {
+  display: flex;
+  width: 900px;
+  position: relative;
+  margin: auto;
+}
+
+@media(max-width: 480px) {
+  .mat-grid-list {
+    width: 90%;
+  }
+}
+@media(min-width: 480px) {
+  mat-grid-list {
+    position: unset;
+  }
+  .mat-grid-list {
+    width: 50%;
+  }
+}
+
+
+@media(min-width: 600px) {
+  mat-grid-list {
+    position: unset;
+  }
+  .mat-grid-list {
+    width: 100%;
+  }
+}
+
+
+app-personagens-card {
+  width: 100%;
+}
+
+.form_input {
+  margin-top: 20px;
+}

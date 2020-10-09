@@ -1,0 +1,16 @@
+<mat-form-field class="form_input" >
+  <mat-label>Buscar personagens</mat-label>
+  <input matInput placeholder="Nome do personagem" value="" (input)="nomeBusca = $event.target.value">
+</mat-form-field>
+
+<mat-grid-list #grid [cols]="cols" rowHeight="300px" gutterSize="10px">
+  <mat-grid-tile *ngFor="let personagem of filtrarPersonagens()">
+
+   <app-personagens-card
+      [srcImagem]="formatarUrlImagem(personagem.image)"
+      [altImagem]="personagem.name"
+      [titulo]="personagem.name"
+      [subtitulo]="personagem.name"></app-personagens-card>
+
+  </mat-grid-tile>
+</mat-grid-list>
